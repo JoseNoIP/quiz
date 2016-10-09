@@ -145,6 +145,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Others Providers
+         */
+        'AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider',
+
     ],
 
     /*
@@ -188,6 +193,7 @@ return [
         'Route'     => Illuminate\Support\Facades\Route::class,
         'Schema'    => Illuminate\Support\Facades\Schema::class,
         'Session'   => Illuminate\Support\Facades\Session::class,
+        'SocialAuth'=> 'AdamWathan\EloquentOAuth\Facades\OAuth',
         'Storage'   => Illuminate\Support\Facades\Storage::class,
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,

@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return Auth::user();
 });
+
+Route::get('facebook/authorize', function() {
+    return SocialAuth::authorize('facebook');
+});
+
+Route::get('facebook/redirect', 'SocialController@facebook');
