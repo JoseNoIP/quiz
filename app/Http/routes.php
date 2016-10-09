@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    return Auth::user();
-});
+Route::get('/', 'WelcomeController@index');
 
 Route::get('facebook/authorize', function() {
     return SocialAuth::authorize('facebook');
